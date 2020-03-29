@@ -1,0 +1,62 @@
+<body>
+<div id = "mobileMessage" class = "container" style = "text-align:center;display:none;">
+    <img src="chat-logo-transparent.png" alt="" style = "height:75%;margin-bottom:15%;">
+    </br>
+    <p style = "font-size:48px;">
+        Sorry, QChat isn't available on this device yet.
+        </br>
+        Please try it on your desktop computer instead.
+    </p>
+</div>
+
+<form id = "signin" class="form-signin" method = "POST" action = "/users/login">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input type="text" id="inputEmail" class="form-control" placeholder="Username" autofocus name = "username">
+      </br>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" name = "password">
+      </br>
+
+
+        <label>Don't have an account?</label>
+        <a href="/users/register">Register now</a>
+
+        {{#if success_msg}}
+            <div class="alert alert-success">
+                {{success_msg}}
+            </div>
+        {{/if}}
+
+        {{#if error_msg}}
+            <div class="alert alert-danger">
+                {{error_msg}}
+            </div>
+        {{/if}}
+
+        {{#if error}}
+            <div class="alert alert-danger">
+                {{error}}
+            </div>
+        {{/if}}
+
+      <button id = "signInBtn" class="btn btn-lg btn-primary" type="submit">Sign in</button>
+      <a href="/users/forgot-password">Forgot password?</a>
+</form>
+
+<script src = "/js/jquery.js"></script>
+<script src = "/js/mobile-detection.js"></script>
+<script>
+    $('.form-signin').on('submit',function(event){
+        //set login varaible to know when the user actually logs in and when refreshes, reloads the page
+        sessionStorage.setItem('login', 'initialLogin');
+    });
+
+    if(jQuery.browser.mobile){
+        $("#mobileMessage").show();
+        $("#signin").hide();
+    }
+</script>
+</body>

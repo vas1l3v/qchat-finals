@@ -1,0 +1,92 @@
+{{!-- <input id = "searchString" type="text"/>
+
+<div id="dataPlace">
+qeqweq
+</div> --}}
+
+<div id = "wrapper">
+    <!-- Sidebar -->
+        <div id = "sidebar-wrapper" class = "bg-dark">
+             <input id = "searchString" type="text" placeholder = "Search">
+            <ul class = "sidebar-nav" id = "userList">
+                <li><a href = "#">Fr1</a></li>
+                <li><a href = "#">Fr1</a></li>
+               <li><a href = "#">Fr1</a></li>
+            </ul>
+        </div>
+
+    <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="content-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Main Content Here
+                       Message <input id = "message" type="
+                       ">
+                       <button id = "btn">Send msg</button>
+                       <br>
+                       <ul id = "messages">
+
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    
+    var socket = io();
+    socket.on('connect', function() {
+        console.log(socket.id);
+        $.ajax({
+            url: '/users/userSocketId/' + socket.id,
+            type: 'PUT',
+            success: function(result) {
+                // Do something with the result
+                console.log(result);
+            }
+        });
+    });
+    
+    $('#btn').click(function(){
+        socket.emit('chat message', $('#message').val());
+        $('#m').val('');
+        return false;
+    });
+   
+    
+
+    socket.emit('login', 'A user logged in');
+    
+    socket.on('login', function(msg){
+        alert(msg);
+    });
+
+
+    socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
+
+    $('#searchString').keyup(function(e) {
+        clearTimeout($.data(this, 'timer'));
+        if (e.keyCode == 8 || (e.keyCode >= 48 && e.keyCode <= 90)){
+            console.log('a');
+        search(true);
+        }else{
+            $(this).data('timer', setTimeout(search, 500));
+        }
+        
+    });
+function search(force) {
+    var existingString = $("#searchString").val();
+    if (!force) return;
+    $.get('/users/search/' + existingString, function(data) {
+        $('#userList').empty();
+        for(var i = 0; i < data.length; i++){
+            $('#userList').append('<li><a>' + data[i].name + '</a></li>');
+        }
+    });
+}
+</script>

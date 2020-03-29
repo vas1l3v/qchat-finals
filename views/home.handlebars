@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> QChat</title>
+    <link rel="icon" type = "image/png" href="chat-logo-transparent.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel = "stylesheet" href = "/css/main.css"/>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.min.css"/>
+  {{!-- <link rel = "stylesheet" href = "/css/bootstrap.css"/> --}}
+  
+</head>
+<body>
+    <div class="container-fluid chat-container">
+        <div class="row">
+            <div id = "profileFriendsSidebar" class="col-lg-3 col-6">
+               <!-- Card -->
+                <div class="card testimonial-card chat-profile">
+
+                    <!-- Bacground color -->
+                    <div class="card-up indigo lighten-1">
+                    </div>
+
+                    <!-- Avatar -->
+                    <div id = "profilePopup" class="avatar mx-auto white">
+                        <a><img id = "profilePic" class = "chat-profile-pic rounded-circle" src="/imgs/default-prof-pic.jpg"> </a>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Name -->
+                        <h4 id = "chatUsername" class="card-title"></h4>
+                        <hr class = "separator">
+                        <!-- Description -->
+                        <p id = "description"><i class="fa fa-quote-left"></i></p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+                <form class="navbar-form" id = "searchForm" role="search">
+                    <div class="input-group add-on">
+                    <input id = "searchInput" class="form-control" placeholder="Search" type="text">
+                    <div class="input-group-btn">
+                        <button id = "searchBtn" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                    </div>
+                </form>
+
+                </br>
+
+                <div class="container-fluid">
+                    <ul id = "mainChatNav" class="nav nav-pills">
+                        <li id = "actions-nav" class = "active nav-item"><a class = "glyphicon glyphicon-user"></a></li>
+                        <li id = "directory-nav" class = "nav-item" id = "directory-nav"><a class = "glyphicon glyphicon-folder-open"></a></li>
+                        <li id = "notifications-nav" class = "nav-item" id = "notifications-nav">
+                            <a class = "glyphicon glyphicon-bell">
+                                <i id = "notificationCounter" class="badge">0</i>
+                            </a>
+                        </li>
+                    </ul>
+                     
+                </div>
+                
+                <hr class = "separator">
+               <div id = "actions" class="container-fluid opt-tabs scrollable">
+                    <ul id = "friendsNav" class="nav nav-pills flex-column">
+                        
+                    </ul>
+               </div>
+
+               <div id = "directory" class="container-fluid opt-tabs scrollable" style = "display:none;">
+                   <ul id = "directoryNav" class="nav  flex-column">
+                        
+                    </ul>
+               </div>
+
+               <div id = "notifications" class="container-fluid opt-tabs scrollable" style = "display:none;">
+                   <div id = "notificationsLoading">
+                       <img src = "/imgs/Preloader_2.gif"/>
+                   </div>
+                   <ul id = "notificationsNav" class="nav  flex-column">
+                        
+                    </ul>
+               </div>
+               
+                
+
+            </div>
+
+            <div id = "mainRightSide" class="col-lg-9 col-6">
+                {{!-- <div id="welcomePage" class="container-fluid" style="text-align: center;">
+                    <img id = "homePageLogo" src="/imgs/chat-logo-transparent.png" />
+                    <p id = "homePageP">Welcome to QChat! Browse our directory and find amazing new friends!</p>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+
+
+    <script src = "/js/underscore.js"></script>
+    <script src = "/js/jquery.js"></script>
+    <script src = "/js/bootstrap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    {{!-- <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script> --}}
+    <script src = "/js/relationship.js"></script>
+    <script src = "/js/main.js"></script>
+    <script src = "/js/chat_windows.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/scrollable.js"></script>
+    <script src = "/js/contextmenu.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
+    <script src = "/js/mobile-detection.js"></script>
+    <script src = "/js/init.js"></script>
+</body>
+</html>

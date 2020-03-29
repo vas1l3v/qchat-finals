@@ -1,0 +1,289 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  height:100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  
+}
+body {
+  /* Margin bottom by footer height */
+  height:100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  color: #000000 !important;
+  background-color: #cce6ff !important;
+}
+
+.row{
+  height:100%;
+}
+
+#profileFriendsSidebar{
+  border-right:1px solid #d3d3d3;
+  background-color:#f2f2f2;
+}
+
+.chat-profile-pic{
+  height:100px;
+  cursor:pointer;
+}
+
+.chat-profile{
+  padding-top:20px;
+  border:none;
+  background-color:#f2f2f2;
+}
+
+.chat-profile-win{
+  padding-top:20px;
+  border:none;
+}
+
+.chat-container{
+  height:100%;
+  overflow:hidden;
+}
+
+.chat-message-area{
+  height:90%;
+  width:90%;
+  resize:none;
+  margin: 0 auto;
+}
+
+.friend-pic{
+  border-radius: 50%;
+  max-height: 35px;
+}
+
+.friend-name{
+  padding-left: 10px;
+}
+
+.friend-online{
+  float:right;
+	color: green;
+}
+
+.friend-offline{
+  float:right;
+	color: red;
+}
+
+.chat-messages{
+  height:55%;
+  overflow-y: auto
+}
+
+.chat-message-area-wrapper{
+  height:15%;
+  border-top:1px solid #d3d3d3;
+}
+
+.chat-profile-info{
+   height:100px;
+  border-bottom:1px solid #d3d3d3;
+}
+
+.add-friend{
+  padding-top:2%;
+  float:right;
+  font-size:20px;
+  color:#337ab7;
+}
+
+.add-friend:hover{
+  color:#007bff;
+  cursor:pointer;
+}
+
+.accept-req{
+  padding-top:2%;
+  padding-right:10px;
+  font-size:20px;
+  color:green;
+}
+
+.accept-req:hover{
+  color:rgba(0,255,0,0.8);
+  cursor:pointer;
+}
+
+.decline-req{
+  padding-top:2%;
+  font-size:20px;
+  color:red;
+}
+
+.decline-req:hover{
+  color:rgba(255,0,0,0.8);
+  cursor:pointer;
+}
+
+#requestContainer{
+  float:right;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  background:#b3d9ff
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  background:#80bfff;
+}
+
+.scrollable{
+  overflow:auto;
+}
+
+#notificationsLoading{
+  text-align:center;
+}
+
+#actions-nav{
+  cursor:pointer;
+  text-align:center;
+  width:32%;
+}
+
+#directory-nav{
+  cursor:pointer;
+  text-align:center;
+  width:32%;
+}
+
+#notifications-nav{
+  cursor:pointer;
+  text-align:center;
+  width:32%;
+}
+
+.friend-item{
+  cursor:pointer;
+}
+
+.chatWindowActive{
+  display:block;
+}
+
+
+/*********************************/
+.chat-message {
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.msg-sent {
+  background-color: #cce6ff;
+}
+
+.msg-recv {
+  background-color: #f1f1f1;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.chat-message::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chat-message img {
+  float: left;
+  max-width: 40px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.chat-message p {
+  overflow-wrap: break-word;
+  word-break:break-word;
+}
+
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.chat-window-profile{
+  margin-top:20px;
+  text-align:center;
+}
+
+.long-text{
+  overflow-wrap: break-word;
+  word-break:break-word;
+}
+
+.chat-profile-pic-fr{
+  height: 60px;
+  cursor: pointer;
+}
+
+.friend-online-win{
+  color:green;
+}
+
+.friend-offline-win{
+	color: red;
+}
+
+.ajs-message.ajs-custom { color: white !important;  background-color: #353639 !important; border: 1px solid #353639 !important;}
+
+.separator{
+  border-top: 1px solid #d3d3d3;
+}
+
+.badge{
+  display: inline-block !important;
+  min-width: 10px !important;
+  padding: 4px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: baseline !important;
+  background-color: #ff9933 !important;
+  border-radius: 10px !important;
+}
+  
+.remove-friend{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#homePageLogo{
+  height: 150px;
+  margin: 20px;
+}
+
+#homePageP{
+  font-size: 20px;
+}

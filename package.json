@@ -1,0 +1,35 @@
+{
+  "name": "qchatapp",
+  "version": "1.0.0",
+  "description": "Final Exam Chat Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Penko Vasilev",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "bootbox": "^4.4.0",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.1",
+    "mongodb": "*",
+    "mongoose": "*",
+    "multer": "^1.3.0",
+    "nodeman": "^1.1.2",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "passport-local-mongoose": "^5.0.0",
+    "socket.io": "^2.1.0",
+    "underscore": "^1.9.0"
+  }
+}
