@@ -1,4 +1,5 @@
 # QChat
+This project was created in 2018 for a bachelor's thesis defense.
 
 The project is developed using Node.js, express and non-relational database MongoDB. Users are able to login, add friends
 and chat with them in real time, as well as receiving real time notifications. Socket.IO is used for creating custom 
